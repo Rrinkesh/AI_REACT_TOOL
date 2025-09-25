@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;           /* Firefox */
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;                      /* Chrome, Safari */
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* scrollbar thumb */
+    border-radius: 9999px;            /* fully rounded */
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;          /* track background */
+  }
+}
