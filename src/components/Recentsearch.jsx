@@ -11,7 +11,7 @@ const Recentsearch = ({recentHistory,setRecentHistory,setSelectedHistory}) => {
   }
   return (
     <>
-    <div className='col-span-1 bg-zinc-400 pt-5 text-2xl'>
+    <div className='col-span-1 bg-zinc-400 pt-5 text-2xl min-h-screen m-0'>
           <h1 className='text-4xl pb-4'>RECENT HISTORY</h1>
           <ul className='text-left '>
             {recentHistory && recentHistory.map((item, index) => (
@@ -20,7 +20,7 @@ const Recentsearch = ({recentHistory,setRecentHistory,setSelectedHistory}) => {
                 setSelectedHistory(item)
 
               } className='pl-3 cursor-pointer
-               hover:bg-blue-400 flex justify-between ' >{item} <button className='cursor-pointer' onClick={() => removeHistory(index)}> <img src="./delete.png" alt="" /> </button></li>
+               hover:bg-blue-400 flex justify-between ' >{item} <button className='cursor-pointer' onClick={(e) =>  {e.stopPropagation(), removeHistory(index)}}> <img src="./delete.png" alt="" /> </button></li>
             ))}</ul>
         </div>
     
