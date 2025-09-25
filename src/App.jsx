@@ -103,7 +103,7 @@ else{document.documentElement.classList.remove('dark');
     <option value="light">Light</option>
     </select>
         <Recentsearch recentHistory={recentHistory} setRecentHistory={setRecentHistory} setSelectedHistory={setSelectedHistory} />
-        <div className='col-span-4 p-16 '>
+        <div className='col-span-4 min-h-screen p-16 m-5 '>
           <h1 className='text-5xl  p-3 font-bold bg-gradient-to-r from-blue-400 to-green-800 bg-clip-text text-transparent'>Hello ,user ask me anything</h1>
           {loader?
             <div role="status">
